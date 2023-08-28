@@ -1,10 +1,7 @@
 $(document).ready(function(){
-    $('header button').click(function() {
-        $('form').slideDown();
+    $('form').on('submit',function(e)){
+        e.preventDefault();
 
-})
-$('form').on("submit", function(e){
-    e.preventDefault();
     const novaTarefa = $('nome-da-tarefa').val();
     const novoItem = $('<li></li>');
     $(`<li> ${novaTarefa}</li>`).appendTo(novoItem);
@@ -13,7 +10,7 @@ $('form').on("submit", function(e){
 
 $('li').click(function(){
     $(this).addClass('marcado');
-});
+
 $('#novaTarefa').val("");
 })
 })
