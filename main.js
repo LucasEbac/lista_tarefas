@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $('form').on('submit',function(e)){
+    $('form').on('submit',function(e){
         e.preventDefault();
 
     const novaTarefa = $('nome-da-tarefa').val();
@@ -12,5 +12,6 @@ $('li').click(function(){
     $(this).addClass('marcado');
 
 $('#novaTarefa').val("");
+})
 })
 })
