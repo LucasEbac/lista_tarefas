@@ -1,17 +1,19 @@
-$(document).ready(function(){
-    $('form').on('submit',function(e){
+$(document).ready( function() { 
+    $("#form-tarefa").on('submit', function(e){
+  
         e.preventDefault();
+        
+        var novaTarefa = $('#nome-da-tarefa').val();
+        
+        if(novaTarefa != ""){
+            $('#lista').append(`<li>${novaTarefa}</li>`);
+        }
+        
+        $('li').click(function () {
+            $(this).addClass('marcado');
 
-    const novaTarefa = $('nome-da-tarefa').val();
-    const novoItem = $('<li></li>');
-    $(`<li> ${novaTarefa}</li>`).appendTo(novoItem);
-    $(novoItem).appendTo('ul');
+            $('#nome-da-tarefa').val("");
+        });
 
-
-$('li').click(function(){
-    $(this).addClass('marcado');
-
-$('#novaTarefa').val("");
-})
-})
-})
+    });
+  })

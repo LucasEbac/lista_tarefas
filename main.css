@@ -33,6 +33,7 @@ form {
     width: 100%;
     justify-content: flex-start;
     margin-bottom: 56px;
+    
 }
 
 form button {
@@ -43,4 +44,17 @@ form button {
     border: none;
     cursor: pointer;
     padding: 8px;
+}
+
+.marcado {
+    text-decoration: line-through;
+}
+
+li:hover {
+    cursor: pointer;
+}
+
+#itens{
+    margin: 20px;
+
 }
